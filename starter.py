@@ -296,10 +296,6 @@ def plots(train_losses, val_losses, test_losses, train_accs, val_accs, test_accs
     plt.legend()
     plt.show()
 
-
-'''
-# Plot code for part 1
-'''
 # 1 Linear Regression
 # Part 1.3 Tuning the Learning Rate
 train_data, val_data, test_data, train_target, val_target, test_target = loadData()
@@ -320,6 +316,7 @@ b2 = 0.999
 e = math.exp(-8)
 
 '''
+# Part 1
 # 5000 epochs, lambda = 0, a = 0.005
 t1 = time.time()
 alpha = 0.005
@@ -656,7 +653,8 @@ W, b, train_losses, val_losses, test_losses, train_accs, val_accs, test_accs = s
 plots(train_losses, val_losses, test_losses, train_accs, val_accs, test_accs,
       "SGD: Loss vs Epochs (batch size = 500, lr = 0.001, reg = 0)",
       "SGD: Accuracy vs Epochs (batch size = 500, lr = 0.001, reg = 0)")
-'''
+
+
 
 # 3.3 repeat
 # Part 3.3 Batch Size Investigation
@@ -665,7 +663,7 @@ plots(train_losses, val_losses, test_losses, train_accs, val_accs, test_accs,
 b1 = 0.9
 b2 = 0.999
 e = math.exp(-8)
-'''
+
 
 W, b, train_losses, val_losses, test_losses, train_accs, val_accs, test_accs = sgd(batchSize=100, epochs=700, a=0.001,
                                                                                    r=0.0, lossType='CE', b1 = b1, b2 =b2, e =e )
@@ -678,7 +676,8 @@ W, b, train_losses, val_losses, test_losses, train_accs, val_accs, test_accs = s
 plots(train_losses, val_losses, test_losses, train_accs, val_accs, test_accs,
       "SGD CE: Loss vs Epochs (batch size = 700, lr = 0.001, reg = 0)",
       "SGD CE: Accuracy vs Epochs (batch size = 700, lr = 0.001, reg = 0)")
-      '''
+      
+
 # Batch size = 1750
 W, b, train_losses, val_losses, test_losses, train_accs, val_accs, test_accs = sgd(batchSize=1750, epochs=700, a=0.001,
                                                                                    r=0.0, lossType='CE', b1 = b1, b2 =b2, e =e )
@@ -686,7 +685,7 @@ plots(train_losses, val_losses, test_losses, train_accs, val_accs, test_accs,
       "SGD CE: Loss vs Epochs (batch size = 1750, lr = 0.001, reg = 0)",
       "SGD CE: Accuracy vs Epochs (batch size = 1750, lr = 0.001, reg = 0)")
 
-'''
+
 # Part 4 repeat
 # Part 4 Hyperparameter Investigation
 # Defaults b1 = 0.9, b2 = 0.999, e = math.exp(-8)
